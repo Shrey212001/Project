@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> Form
+</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body onload='document.form1.text1.focus()' onload='document.form1.date.focus()' onsubmit="return results();">
+<script src="validation-date.js"></script>
+	<form name="form1" action="#" method="POST">
+  <div class="container">
+    <h1><b>Registration Form</b></h1>
+    <hr>
+       <label for="Employee Name"><b>Employee Name</b></label>
+    <input type="text" placeholder="Enter Employee Name" name="name" id="name" maxlength="50" required>
+ 
+ <label for="Employee ID"><b>Employee ID:</b></label>
+    <input type="text" placeholder="Enter Employee ID" name="eid" id="eid" maxlength="50" required>
+    <br><br>
+ 
+  <label for="Birthdate"><b>Employee Birthdate </b></label> &emsp;
+<input type="date" placeholder="Enter Birthdate" name="date" id="date" required>
+ <br><br> 
+    <label for="Gender"><b>Gender</b></label>
+<input type="text" placeholder="Enter Gender" name="gender" id="gd" required>
+
+    <label for="Mobile Number" class="mail"><b>Mobile Number</b></label>
+    <input type="text" placeholder = "xxx-xxx-xxxx" id="mn" name="text1" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" required>
+ <br><br>
+ <label for="Department"><b>Department</b></label> &emsp;
+  <select type="dropdown" name="dept" maxlength="50" value="select your Department" id="dep" required />
+				<option value="default">Select your Department</option>
+				<option value="A+">IT</option>
+				<option value="A-">HR</option>
+				<option value="B+">Management</option>
+			</select>   
+    <hr>
+    <button type="submit" id="submit" class="registerbtn" onclick="phonenumber(document.form1.text1)" onclick="validatedate(document.form1.date)">Save</button>
+  </div>
+  </div>
+</form>
+<script src="validation-pn.js"></script>
+<script>
+function results(){
+   var name=document.getElementById('name').value;
+   var empid=document.getElementById('eid').value;
+   var bdate=document.getElementById('gd').value;
+   var numbr=document.getElementById('mn').value;
+   var dept=document.getElementById('dep').value;
+   document.write(name)
+<div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Id</th>
+    <th>Gender</th>
+    <th>Mobile no.</th>
+    <th>Department</th>
+  </tr>
+  <tr>
+    <td>document.write(name)</td>
+    <td>document.write(empid)</td>
+    <td>document.write(bdate)</td>
+     <td>document.write(numbr)</td>
+    <td>document.write(dept)</td>
+  </tr>
+
+</table>
+</div>
+}
+</script>
+</body>
+</html>
